@@ -29,13 +29,12 @@ import java.util.List;
 /**
  * Created by ahmed on 12/12/15.
  */
-
 public class MovieFragment extends Fragment implements Movies_json_Task.Callback {
 
     private String SORT_SETTING_KEY = "sort_setting";
     private final String FAVOURITES = "fav";
-    private final String POPULARITY_DESC = "popularity.desc";
-    private final String RATING_DESC = "vote_count.desc";
+    private final String POPULARITY_DESC = "popular";
+    private final String RATING_DESC = "top_rated";
     private final String MOVIES_KEY = "movies";
     private GridView mGridView;
     private TextView progressTV;
