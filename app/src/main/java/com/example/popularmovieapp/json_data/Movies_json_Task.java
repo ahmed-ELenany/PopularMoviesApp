@@ -18,9 +18,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by amedM on 12/15/2015.
- */
+
 public class Movies_json_Task extends AsyncTask<String, Void, List<Movie>> {
     Callback callback;
     private final String TAG = "Movies_json_Task";
@@ -59,9 +57,9 @@ public class Movies_json_Task extends AsyncTask<String, Void, List<Movie>> {
         String jsonStr = null;
 
         try {
-            final String BASE_URL = "http://api.themoviedb.org/3/discover/movie?sort_by=";
+            final String BASE_URL = "http://api.themoviedb.org/3/movie/";
             final String api_key="c11f6d1d1d3ee47740a208568be1bdc9";
-            final String full_url=BASE_URL+sort_type+"&api_key="+api_key;
+            final String full_url=BASE_URL+sort_type+"?api_key="+api_key;
             URL url = new URL(full_url);
             urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setRequestMethod("GET");
