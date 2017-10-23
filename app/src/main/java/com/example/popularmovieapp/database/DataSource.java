@@ -55,6 +55,7 @@ public class DataSource {
             values.put(DBHelper.MOVIE_ID, movie.getId());
             String movieData = movie.getJsonObject();
             values.put(DBHelper.MOVIE_JSONOBJECT, movieData);
+
             id = database.insert(DBHelper.TABLE_Networks, null, values);
         } catch (Exception e) {
             Toast.makeText(context, "Something Error in Adding..", Toast.LENGTH_SHORT).show();
